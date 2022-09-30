@@ -27,4 +27,4 @@ ADD src /tmp/src
 
 ENV JOTFORM_API_KEY=insert_api_key
 COPY scripts/entrypoint.sh /tmp
-ENTRYPOINT ["sh", "/tmp/entrypoint.sh"]
+CMD ["sh", "/tmp/entrypoint.sh"]
