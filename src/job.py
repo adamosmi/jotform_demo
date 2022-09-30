@@ -17,7 +17,7 @@ output_path = f'/job_data/output_{datetime_string}.csv'  # /job_data is defined 
 
 # get all user submissions
 print('retrieving submission data from jotform api...')
-user_submissions_req = requests.get(f'https://api.jotform.com/user/submissions?apiKey={api_key}')
+user_submissions_req = requests.get(f'https://api.jotform.com/user/submissions?apiKey={api_key}', verify=False)
 user_submissions_res = json.loads(user_submissions_req.text)
 # pprint(user_submissions_res)
 
